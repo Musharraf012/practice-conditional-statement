@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="inp1">
+    <input type="number" id="inp2">
+
+    <button onclick="total()">Result</button>
+    <div id="display"></div>
+    <div id="display1"></div>
+
+    <script>
+        let inp1,inp2 = 0;
+
+        function total(){
+            inp1 = +(document.getElementById("inp1").value)
+            inp2 = +(document.getElementById("inp2").value)
+
+            let totall = inp1 +inp2
+
+            document.getElementById("display").innerHTML = totall;
+
+            if(totall>=20000){
+                document.getElementById("display1").innerHTML = "you got 20% discount which is =" + (totall*20)/100
+            }
+              else {
+                document.getElementById("display1").innerHTML = "you got 10% discount which is =" + (totall*10)/100
+              }
+              
+
+        }
+
+
+    </script>
+</body>
+</html>
